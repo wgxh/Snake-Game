@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.map {
+	position: relative;
+	background-color: #000;
+	transition: 1s ease-in-out;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #000;
+	overflow: hidden;
+}
+
+.map > .snake-body {
+	background-color: #fff;
+	--x: 0px;
+	--y: 0px;
+	--size: 20px;
+	width: var(--size);
+	height: var(--size);
+	transition: 0.3s;
+	position: absolute;
+	left: var(--x);
+	top: var(--y);
+}
+
+.map > .food {
+	--x: 0px;
+	--y: 0px;
+	--size: 20px;
+	width: var(--size);
+	height: var(--size);
+	transition: 0.3s ease-in-out;
+	background-color: red;
+	position: absolute;
+	left: var(--x);
+	top: var(--y);
+}
